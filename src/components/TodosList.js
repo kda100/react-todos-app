@@ -2,6 +2,7 @@ import { ListGroup } from "react-bootstrap";
 import { Fragment, useContext } from "react";
 import TodosContext from "../store/TodosContext";
 
+//Component to display the todos list
 function TodosList(props) {
   const context = useContext(TodosContext);
   console.log(context.todos);

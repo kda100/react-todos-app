@@ -3,17 +3,21 @@ import Button from "react-bootstrap/Button";
 import { useContext, useState } from "react";
 import TodosContext from "../store/TodosContext";
 
+// Form for adding todos to todo List.
+
 function AddTodo(props) {
   const context = useContext(TodosContext);
   const [enteredTodo, setEnteredTodo] = useState("");
 
+  //handles form submission
   function onSubmitTodoHandler(event) {
     event.preventDefault();
     context.addTodo(enteredTodo);
     setEnteredTodo("");
   }
 
-  function onChangeTodo(event) {
+  //handles changing form input
+  function onChangeTodoHandler(event) {
     setEnteredTodo(event.target.value);
   }
 
@@ -26,7 +30,7 @@ function AddTodo(props) {
           type="text"
           placeholder="Todo"
           value={enteredTodo}
-          onChange={onChangeTodo}
+          onChange={onChangeTodoHandler}
         />
       </Form.Group>
       <Button className="mt-2" variant="primary" type="submit">
