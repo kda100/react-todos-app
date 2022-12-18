@@ -10,9 +10,11 @@ function TodosList(props) {
   return (
     <Fragment>
       <h1>Todos List</h1>
-      <ListGroup>
+      <ListGroup as="ol" numbered>
         {context.todos.map((todo, index) => (
-          <ListGroup.Item key={index}>{todo}</ListGroup.Item>
+          <ListGroup.Item as="li" key={index}>
+            {todo}
+          </ListGroup.Item>
         ))}
       </ListGroup>
     </Fragment>
