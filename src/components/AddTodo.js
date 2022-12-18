@@ -22,7 +22,7 @@ function AddTodo(props) {
   }
 
   return (
-    <Form onSubmit={onSubmitTodoHandler}>
+    <Form className="mt-3" onSubmit={onSubmitTodoHandler}>
       <Form.Group className="mb-3">
         <Form.Label htmlFor="todo">Todo</Form.Label>
         <Form.Control
@@ -33,7 +33,7 @@ function AddTodo(props) {
           onChange={onChangeTodoHandler}
         />
       </Form.Group>
-      <Button className="mt-2" variant="primary" type="submit">
+      <Button className="mb-5" variant="primary" type="submit">
         Add Todo
       </Button>
     </Form>
