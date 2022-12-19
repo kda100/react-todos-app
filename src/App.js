@@ -3,7 +3,9 @@ import { TodosContextProvider } from "./store/TodosContext";
 import AddTodo from "./components/AddTodo";
 import TodosList from "./components/TodosList";
 
-//App represents top of component tree.
+/**
+ * App represents top of component tree.
+ */
 function App() {
   return (
     <TodosContextProvider>

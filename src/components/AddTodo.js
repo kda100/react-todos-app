@@ -3,20 +3,29 @@ import Button from "react-bootstrap/Button";
 import { useContext, useState } from "react";
 import TodosContext from "../store/TodosContext";
 
-// Form for adding todos to todo List.
+/**
+ * Form for adding todos to todo List.
+ */
 
 function AddTodo(props) {
   const context = useContext(TodosContext);
   const [enteredTodo, setEnteredTodo] = useState("");
 
-  //handles form submission
+  /**
+   * Add Todo to todo list in context
+   * makes input field empty
+   * @param {SyntheticBaseEvent} event
+   */
   function onSubmitTodoHandler(event) {
     event.preventDefault();
     context.addTodo(enteredTodo);
     setEnteredTodo("");
   }
 
-  //handles changing form input
+  /**
+   * change state if enteredTodo on keystroke
+   * @param {SyntheticBaseEvent} event
+   */
   function onChangeTodoHandler(event) {
     setEnteredTodo(event.target.value);
   }

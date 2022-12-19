@@ -6,16 +6,22 @@ const TodosContext = createContext({
   addTodo: (todo) => {},
 });
 
-// provides the todos state to all components contained within its children.
+/**
+ * Provides the todos state to all components contained within its children.
+ */
 export function TodosContextProvider(props) {
   const [todos, setTodos] = useState([]);
 
+  /**
+   * @param {String} todo
+   */
   function addTodo(todo) {
     setTodos((prevTodos) => {
       return [...prevTodos, todo];
     });
   }
 
+  //context of todos.
   const context = {
     todos,
     addTodo,
