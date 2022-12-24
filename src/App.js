@@ -9,10 +9,10 @@ import TodosList from "./components/TodosList";
 function App() {
   return (
     <TodosContextProvider>
-      <div className="container">
+      <main className="container">
         <AddTodo />
         <TodosList />
-      </div>
+      </main>
     </TodosContextProvider>
   );
 }
