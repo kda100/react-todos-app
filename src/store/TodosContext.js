@@ -13,7 +13,7 @@ export function TodosContextProvider(props) {
   const [todos, setTodos] = useState([]);
 
   /**
-   * @param {String} todo
+   * @param {string} todo
    */
   function addTodo(todo) {
     setTodos((prevTodos) => {
